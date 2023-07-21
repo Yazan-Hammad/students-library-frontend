@@ -8,6 +8,7 @@ import {
   handleChange,
 } from '../components/Form/formHelpers';
 import DynamicForm from '../components/Form/DynamicForm';
+import {URL} from '../App';
 
 function ResetPasswordPage() {
   const { makeRequest } = useBackend();
@@ -35,7 +36,7 @@ function ResetPasswordPage() {
 
     makeRequest(
       'patch',
-      `http://127.0.0.1:5000/api/v1/users/resetPassword/${code}`,
+      `${URL}/api/v1/users/resetPassword/${code}`,
       'The Password Changed Successfully',
       { password, passwordConfirm },
       {},

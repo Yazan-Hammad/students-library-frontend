@@ -3,6 +3,7 @@ import jwtDecode from "jwt-decode";
 import { createContext, useEffect, useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import {URL} from "../App";
 
 const BackendContext = createContext();
 
@@ -16,7 +17,7 @@ function BackendProvider({ children }) {
     try {
       const decoded = jwtDecode(token);
       const response = await axios.get(
-        `http://127.0.0.1:5000/api/v1/users/${decoded.id}`
+        `${URL}/api/v1/users/${decoded.id}`
       );
       setUser(response.data.data.user);
     } catch (error) {

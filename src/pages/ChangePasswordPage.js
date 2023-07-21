@@ -8,6 +8,7 @@ import {
   handleFocus,
 } from '../components/Form/formHelpers';
 import DynamicForm from '../components/Form/DynamicForm';
+import {URL} from '../App';
 
 function ChangePasswordPage({ formData, setFormData, setOpenForm }) {
   const { token, makeRequest } = useBackend();
@@ -67,7 +68,7 @@ function ChangePasswordPage({ formData, setFormData, setOpenForm }) {
 
     makeRequest(
       'patch',
-      `http://127.0.0.1:5000/api/v1/users/updateMyPassword`,
+      `${URL}/api/v1/users/updateMyPassword`,
       'The Password Changed Successfully',
       { passwordCurrent, password, passwordConfirm },
       {

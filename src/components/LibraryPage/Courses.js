@@ -38,6 +38,7 @@ function Courses() {
           <CourseFormPage
             formData={formData}
             setFormData={setFormData}
+            setOpenForm={setFormData}
             mode={'editing'}
           />
         </PopupFormPage>

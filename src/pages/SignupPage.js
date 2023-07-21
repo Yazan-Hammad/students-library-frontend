@@ -4,6 +4,7 @@ import '../css/Login.css';
 import useNavigation from '../hooks/use-navigation';
 import useBackend from '../hooks/use-backend';
 import SignupContent from '../components/SignupPage/SignupContent';
+import {URL} from '../App';
 
 function Signup() {
   const { makeRequest } = useBackend();
@@ -22,7 +23,7 @@ function Signup() {
 
     makeRequest(
       'post',
-      'http://127.0.0.1:5000/api/v1/users/signup',
+      `${URL}/api/v1/users/signup`,
       'Created Successfully',
       {
         name,

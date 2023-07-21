@@ -16,29 +16,6 @@ function PopupFormPage({ setOpenForm, children }) {
     setOpenForm((value) => false);
   };
 
-  // const handleChange = (e) => {
-  //   const { name, value } = e.target;
-  //   setFormData((prevFormData) => ({
-  //     ...prevFormData,
-  //     [name]: value,
-  //   }));
-  // };
-
-  // const useForm = () => {
-  //   setOpen((value) => true);
-  // };
-
-  // const inputFields = Object.keys(formData).map((key) => {
-  //   return (
-  //     <InputTextField
-  //       label={key.toUpperCase()}
-  //       value={formData[key]}
-  //       onChange={handleChange}
-  //       name={key}
-  //     />
-  //   );
-  // });
-
   return ReactDOM.createPortal(
     <>
       <div className="overlay" onClick={closeForm}></div>

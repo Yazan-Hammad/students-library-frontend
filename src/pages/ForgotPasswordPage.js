@@ -46,7 +46,7 @@ function ResetPasswordPage() {
 
     makeRequest(
       'post',
-      'http://127.0.0.1:5000/api/v1/users/forgotPassword',
+      `${URL}/api/v1/users/forgotPassword`,
       "We'll send you a code to your email",
       { email },
       {},

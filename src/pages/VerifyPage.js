@@ -1,6 +1,9 @@
 // import React, { useState, useEffect } from "react";
 // import "../css/ResetPasswordPage.css";
 // import useBackend from "../hooks/use-backend";
+
+import {URL} from "../App";
+
 // import useNavigation from "../hooks/use-navigation";
 
 // function VerifyPage() {
@@ -12,7 +15,7 @@
 //   const createAccount = () => {
 //     makeRequest(
 //       "post",
-//       "http://127.0.0.1:5000/api/v1/users/signup",
+//       `${URL}/api/v1/users/signup`,
 //       "Created Successfully",
 //       {
 //         name: name,

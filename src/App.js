@@ -16,6 +16,8 @@ import ForgotPasswordPage from "./pages/ForgotPasswordPage";
 import { CoursesProvider } from "./contexts/courses";
 import { BackendProvider } from "./contexts/backend";
 
+export const URL = process.env.REACT_APP_SERVER_URL;
+
 function App() {
   return (
     <>

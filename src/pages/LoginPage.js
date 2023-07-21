@@ -3,6 +3,7 @@ import '../css/Login.css';
 import useNavigation from '../hooks/use-navigation';
 import useBackend from '../hooks/use-backend';
 import LoginContent from '../components/LoginPage/LoginContent';
+import {URL} from '../App';
 
 function Login() {
   const { makeRequest } = useBackend();
@@ -20,7 +21,7 @@ function Login() {
 
     makeRequest(
       'post',
-      'http://127.0.0.1:5000/api/v1/users/login',
+      `${URL}/api/v1/users/login`,
       'Successfully Logedin',
       {
         email,

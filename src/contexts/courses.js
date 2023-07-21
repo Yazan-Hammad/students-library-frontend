@@ -1,6 +1,7 @@
 import { createContext, useEffect, useState } from "react";
 import useBackend from "../hooks/use-backend";
 import Swal from "sweetalert2";
+import {URL} from "../App";
 
 const CoursesContext = createContext();
 
@@ -9,7 +10,7 @@ function CoursesProvider({ children }) {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
-    fetch("http://127.0.0.1:5000/api/v1/courses")
+    fetch(`${URL}/api/v1/courses`)
       .then((res) => res.json())
       .then((data) => setCourses(data.data.courses));
   }, []);
@@ -24,7 +25,7 @@ function CoursesProvider({ children }) {
 
     makeRequest(
       "post",
-      "http://127.0.0.1:5000/api/v1/courses",
+      `${URL}/api/v1/courses`,
       "Course Successfully Created",
       { ...newCourse },
       { Authorization: `Bearer ${token}` },
@@ -55,7 +56,7 @@ function CoursesProvider({ children }) {
       result.isConfirmed &&
         makeRequest(
           "delete",
-          `http://127.0.0.1:5000/api/v1/courses`,
+          `${URL}/api/v1/courses`,
           "Course Successfully Deleted",
           { name: courseName },
           { Authorization: `Bearer ${token}` },
@@ -77,7 +78,7 @@ function CoursesProvider({ children }) {
 
     makeRequest(
       'patch',
-      `http://127.0.0.1:5000/api/v1/courses/`,
+      `${URL}/api/v1/courses/`,
       'Course Successfully Edited',
       { ...newCourse, currentName: oldCourse.name },
       { Authorization: `Bearer ${token}` },
