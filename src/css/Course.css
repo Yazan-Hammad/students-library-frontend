@@ -1,0 +1,170 @@
+.course {
+	width: 20rem;
+	height: 24rem;
+	perspective: 100rem;
+}
+
+.course-inner {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	transform-style: preserve-3d;
+	transition: transform 0.8s;
+}
+
+.course.active .course-inner {
+	transform: rotateY(180deg);
+}
+
+.course-front,
+.course-back {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	backface-visibility: hidden;
+	padding: 1rem;
+	border-radius: 1rem;
+	box-shadow: 0.1rem 0.1rem 0.5rem black;
+
+	transition: box-shadow 1s;
+}
+
+.hilight .course-front,
+.hilight .course-back {
+	box-shadow: 1rem 1rem 5rem var(--color);
+}
+
+.course-front {
+	background-color: #fff;
+}
+
+.course-front :not(:last-child):not(:first-child) {
+	margin-bottom: 0.5rem;
+}
+
+.course-back {
+	background-color: #f9f9f9;
+	transform: rotateY(180deg);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.course-back .content {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.course-back a {
+	margin-bottom: 1rem;
+	font-size: 1.6rem;
+	width: 15rem;
+	background-image: var(--background-image);
+	/*linear-gradient(rgba(131, 102, 169, 0.7), black); */
+	color: white;
+	text-align: center;
+	border-radius: 0.5rem;
+	padding: 0.25rem 0;
+}
+
+.course h2,
+.course p {
+	margin: 0;
+	text-align: center;
+}
+
+.course h2 {
+	font-size: 2rem;
+	margin-top: 1.6rem;
+}
+
+.course p {
+	font-size: 1.6rem;
+}
+
+.course .image {
+	display: block;
+	width: 18rem;
+	height: 10.5rem;
+	overflow: hidden;
+	border-radius: 0.5rem;
+}
+
+.course .image img {
+	width: 100%;
+	height: 100%;
+}
+
+.course-front .department {
+	position: relative;
+	padding: 1rem 0;
+}
+
+.department span {
+	background-color: #fff;
+	padding: 0 1rem;
+}
+
+.department::before {
+	content: "";
+	width: 100%;
+	height: 1px;
+	background-color: rgba(131, 102, 169, 0.7);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.option {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.option ul {
+	display: none;
+	position: absolute;
+	right: 0;
+	top: 3rem;
+	background-color: #fff;
+	padding: .5rem;
+	font-size: 1.6rem;
+	border-radius: var(--border-radius);
+	box-shadow: 1px 1px 5px #000;
+}
+
+.option ul::before {
+	content: "";
+	position: absolute;
+	bottom: 100%;
+	right: 1.7rem;
+	width: 0;
+	height: 0;
+	border-left: 5px solid transparent;
+	border-right: 5px solid transparent;
+	border-bottom: 5px solid #fff;
+}
+
+.option svg {
+	width: 3rem;
+	height: 1.5rem;
+	cursor: pointer;
+}
+
+.option.opened ul {
+	display: block;
+}
+
+.option.opened ul * {
+	cursor: pointer;
+	padding: 0.5rem 1rem;
+}
+
+.option.opened ul *:hover {
+	cursor: pointer;
+	background-color: #f2f2f2;
+}

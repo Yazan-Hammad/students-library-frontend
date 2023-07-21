@@ -1,0 +1,150 @@
+.profile {
+	box-sizing: border-box;
+
+	text-align: center;
+
+	height: calc(100vh - 7.5rem);
+
+	padding-top: calc(var(--section-padding) / 2);
+	padding-bottom: clac(var(--section-padding) / 2);
+
+	font-size: 1.6rem;
+}
+
+.profile .basic-info>* {
+	margin-bottom: 3rem;
+}
+
+.profile .container {
+	display: grid;
+	grid-gap: 5rem;
+	font-size: 1.6rem;
+}
+
+@media (min-width: 768px) {
+	.profile .container {
+		grid-template-columns: 1fr 2fr 2rem;
+	}
+}
+
+@media (max-width: 767px) {
+	.basic-info {
+		order: 1;
+	}
+	.setting-container {
+		order: 2;
+	}
+	.user-brief {
+		order: 3;
+	}
+	.profile .container {
+		grid-template-columns: 1fr 2rem;
+	}
+}
+
+@media (max-width: 480px) {
+	.profile .container {
+		grid-template-columns: 1fr 2rem;
+		grid-gap: 2rem;
+	}
+}
+
+.image-alternative,
+.user-image {
+	width: 30rem;
+	height: 30rem;
+	border-radius: 50%;
+}
+
+.image-alternative {
+	background-color: #44426c98;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.user-name {
+	font-size: 2.4rem;
+}
+
+.user-role {
+	font-size: 1.8rem;
+	color: #888;
+}
+
+.user-email {
+	font-size: 1.6remp;
+}
+
+.user-brief {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	line-height: 1.5;
+	text-align: left;
+}
+
+.user-brief h2 {
+	margin-bottom: 1.5rem;
+	position: relative;
+}
+
+.user-brief h2::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	width: 100%;
+	bottom: 0;
+	height: 1px;
+	background-color: #ccc;
+}
+
+.setting-container {
+	position: relative;
+}
+
+.profile .container svg {
+	font-size: 20px;
+
+	transition: transform 0.3s;
+	cursor: pointer;
+}
+
+.profile .container svg.active {
+	transform: rotate(90deg);
+}
+
+.profile .container .settings {
+	position: absolute;
+	right: -1rem;
+	top: 35px;
+	background-color: #fff;
+	border-radius: var(--border-radius);
+
+	box-shadow: var(--box-shadow);
+}
+
+.profile .container .settings::before {
+	content: "";
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 10px solid white;
+
+	position: absolute;
+	right: 1rem;
+	top: -1rem;
+}
+
+.profile .container .settings * {
+	padding: 1rem 1.5rem;
+	cursor: pointer;
+
+	transition: color 0.3s;
+}
+
+.profile .container .settings *:hover {
+	color: blue;
+}

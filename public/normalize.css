@@ -1,0 +1,135 @@
+/* Normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
+
+/* Reset box-sizing to border-box */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Remove margin and padding on all elements */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+figure,
+ol,
+ul,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+/* Set font-size and font-weight to 'inherit' for all elements */
+body,
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* Reset list styles on ordered and unordered lists */
+ol,
+ul {
+  list-style: none;
+}
+
+/* Reset font-size, font-weight, and text-decoration on 'a' elements */
+a {
+  font-size: inherit;
+  font-weight: inherit;
+  text-decoration: none;
+}
+
+/* Reset vertical alignment and border properties on 'img' elements */
+img {
+  vertical-align: middle;
+  border-style: none;
+}
+
+/* Reset miscellaneous styling on form elements */
+button,
+input,
+select,
+textarea {
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  outline: none;
+  padding: 0;
+  resize: none;
+}
+
+/* Reset display, overflow, and vertical alignment on 'table' elements */
+table {
+  display: table;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Reset the appearance of 'fieldset' elements */
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Reset the appearance of 'legend' elements */
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5em;
+  font-size: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* Reset the appearance of 'textarea' elements */
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+/* Reset the appearance of 'input' elements */
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Reset the appearance of 'input' elements of type 'search' */
+input[type="search"] {
+  appearance: none;
+  outline-offset: -2px;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 16px 16px;
+}
+
+.at-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

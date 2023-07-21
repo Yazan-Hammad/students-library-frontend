@@ -1,0 +1,176 @@
+.signup-landing,
+.login-landing {
+	padding-top: var(--section-padding);
+	padding-bottom: var(--section-padding);
+	min-height: 100vh;
+	background-color: #f2f2f2;
+}
+
+.signup-landing .container,
+.login-landing .container {
+	height: 100%;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.signup-landing .content,
+.login-landing .content {
+	width: 50rem;
+}
+
+.signup-landing .content .logo,
+.login-landing .content .logo {
+	margin-bottom: 2rem;
+	width: 25rem;
+	background-color: var(--color);
+	padding: 2rem;
+	border-radius: 2rem;
+}
+
+
+.signup-landing .content p,
+.login-landing .content p {
+	font-size: 2.5rem;
+	line-height: 1.6;
+	margin-bottom: 2rem;
+}
+
+@media (max-width: 767px) {
+
+	.signup-landing .content p,
+	.login-landing .content p {
+		padding-left: 0;
+	}
+
+	.signup-landing,
+	.login-landing {
+		padding-top: calc(var(--section-padding) / 2);
+		padding-bottom: calc(var(--section-padding) / 2);
+	}
+}
+
+.login-section,
+.signup-section {
+	background-color: white;
+
+	position: relative;
+	width: 40rem;
+	padding: 1.5rem;
+	border-radius: var(--border-radius);
+	box-shadow: 5px 5px 15px black;
+}
+
+.content span {
+	background-color: var(--color);
+	color: white;
+	padding: 0.2rem .8rem;
+	transform: skew(10deg, 10deg);
+	border-radius: var(--border-radius);
+}
+
+.login-section a:last-child {
+	display: block;
+	text-align: center;
+	margin-top: 1.5rem;
+	font-size: 1.4rem;
+}
+
+.signup-section a,
+.login-section a {
+	text-align: center;
+}
+
+
+button.register {
+	display: block;
+	width: 100%;
+	background-color: #228e9e;
+	background-image: var(--background-image);
+	color: white;
+	padding: 1re, 2rem;
+	border: none;
+	border-radius: var(--border-radius);
+	font-size: 1.6rem;
+	cursor: pointer;
+	margin: 2rem auto 0;
+}
+
+.login-landing .login-section form span.error {
+	display: block;
+
+	background-color: red;
+	color: white;
+
+	height: 2rem;
+	width: 2rem;
+	border-radius: 50%;
+	text-align: center;
+
+	position: absolute;
+	z-index: 2;
+	right: 1rem;
+	top: 35%;
+
+	transform: translateY(-50%);
+	cursor: pointer;
+}
+
+.login-landing .login-section form span.error span.text {
+	position: absolute;
+	padding: 4px;
+	border-radius: 6px;
+
+	top: 25px;
+	left: 50%;
+	transform: translateX(-50%);
+	background-color: #1d1d1d;
+	color: white;
+	border-radius: var(--border-radius);
+	width: 200px;
+	display: none;
+}
+
+.login-landing .login-section form span.error:hover span.text {
+	display: block;
+}
+
+@media (max-width: 768px) {
+	.login-landing .content .logo {
+		width: 15rem;
+	}
+}
+
+/* Medium */
+@media (max-width: 992px) {
+
+	.signup-landing .content,
+	.login-landing .content {
+		text-align: center;
+	}
+
+	.login-landing .content .logo {
+		width: 20rem;
+	}
+
+	.login-landing .content p {
+		padding-left: 0;
+		text-align: center;
+	}
+}
+
+.password-field {
+	position: relative;
+}
+
+.eye {
+	font-size: 1.6rem;
+
+	position: absolute;
+	right: 1rem;
+	top: 1.3rem;
+
+	cursor: pointer;
+}
